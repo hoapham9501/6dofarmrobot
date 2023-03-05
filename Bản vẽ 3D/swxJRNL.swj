@@ -1,0 +1,34 @@
+' ******************************************************************************
+' swxJRNL.swj - journal recorded on 11/29/22 by ASUS
+' *****************************************************************************
+Dim swApp As Object
+
+Dim Part As Object
+Dim boolstatus As Boolean
+Dim longstatus As Long, longwarnings As Long
+
+Sub main()
+
+Set swApp = Application.SldWorks
+
+' MSGBOX
+' YES	IDUSECMDLINKS^$You appear to have experienced problems the last time you loaded the SOLIDWORKS Utilities add-in.	IDMAIN^$Do you wish to continue loading this add-in?	IDCONTENT^$&Yes, continue to load SOLIDWORKS Utilities	IDYES^$&No, disable SOLIDWORKS Utilities.	IDNO^$
+
+
+' Open
+Set Part = swApp.OpenDoc6("C:\Users\ASUS\OneDrive\Desktop\DA\Axis3part2.step.SLDPRT", 1, 0, "", longstatus, longwarnings)
+swApp.ActivateDoc2 "Axis3part2.step", False, longstatus
+Set Part = swApp.ActiveDoc
+Set Part = swApp.ActiveDoc
+Dim myModelView As Object
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 0
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+swApp.ExitApp
+End Sub
